@@ -366,3 +366,41 @@ iframe {
     color: #b3b3b3; /* Change color on hover */
 }
 
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 100%; /* Ensures the container does not exceed the viewport width */
+    overflow: hidden; /* Prevents the image from overflowing */
+    display: flex;
+    justify-content: center; /* Centers the image */
+}
+
+.responsive-image {
+    max-width: 100%; /* Ensures the image scales to fit the container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes any default inline spacing */
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+/* Responsive design adjustments */
+@media only screen and (max-width: 768px) {
+    .responsive-image {
+        object-fit: contain; /* Adjusts the image behavior on smaller screens */
+    }
+}
+
+.hero-image img,
+.slider-container .slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images cover the area while maintaining aspect ratio */
+    display: block; /* Removes any unwanted space below the image */
+}
+

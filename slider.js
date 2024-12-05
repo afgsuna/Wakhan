@@ -35,3 +35,8 @@ document.getElementById('menuButton').addEventListener('click', function() {
     const menu = document.getElementById('dropdownMenu');
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 });
+
+document.getElementById('nav-btn').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('hidden');
+});
