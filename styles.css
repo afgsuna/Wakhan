@@ -1,0 +1,368 @@
+.hero-image {
+    position: relative;
+    text-align: center;
+    height: 500px;
+    background-color: #cccccc;
+}
+
+.hero-image {
+    background-image: url("COVERPamir-HD-15.jpg");
+    background-color: #cccccc;
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    position: relative;
+}
+
+.hero-text-ini {
+    position: absolute;
+    bottom: 20px; /* Pushes text slightly above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 90%; /* Ensures text is responsive */
+    text-align: center;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.about-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333;
+    text-align: center;
+}
+
+.about-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about-section p {
+    font-size: 20rem; /* Double the original 2rem, making it 4rem */
+    font-weight: bold; /* Make the text bolder */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.about-section ul li strong {
+    color: #555;
+}
+
+.about-section {
+    padding: 50px 20px;
+    background-color: #1a202c; /* Matches the website's dark theme */
+    color: #e2e8f0; /* Light text for contrast */
+    text-align: center;
+}
+
+.about-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #cbd5e0;
+}
+
+/* Base styling for the list */
+.values-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Styling for individual list items */
+.values-list li {
+    font-size: 2rem; /* Larger font size */
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    background-color: #2d3748;
+    padding: 20px; /* Adjusted padding for better visual */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px; /* Larger max-width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1); /* Initial scale */
+    opacity: 0; /* Hidden until animated */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
+}
+
+/* Icon styling */
+.values-list li i {
+    font-size: 2rem; /* Bigger icons */
+    color: #63b3ed; /* Accent color */
+    margin-right: 15px; /* Spacing between icon and text */
+}
+
+/* Animation when scrolled into view */
+.values-list li.visible {
+    opacity: 1;
+    transform: scale(1.1); /* Slight zoom on scroll */
+}
+
+/* Animation for icons */
+.values-list li i {
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.image-slider {
+    position: relative;
+    width: 100%; /* Full width for the section */
+    height: auto; /* Let height adjust to the slider */
+    background-color: #1a202c; /* Matches website background */
+    padding: 40px 0; /* Add vertical spacing */
+}
+
+.slider-container {
+    position: relative;
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Increase the maximum width of the slider */
+    margin: 0 auto; /* Center the slider */
+    height: 700px; /* Increased height for larger pictures */
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+    background-color: #2d3748; /* Optional secondary background */
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image scales proportionally and fills the container */
+    border-radius: 10px; /* Match the container's rounded corners */
+}
+
+.fade {
+    animation: fadeEffect 2s ease-in-out; /* Smooth fading effect */
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+* Entire Page Background */
+body {
+    background-color: #1a202c; /* Dark theme background */
+    color: #e2e8f0; /* Light text for contrast */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Membership Form Section */
+.membership-form {
+    background-color: #1a202c; /* Matches the page background */
+    text-align: center;
+    padding: 40px 20px; /* Adds padding for spacing */
+    color: #e2e8f0; /* Matches the website's text color */
+}
+
+/* Heading Styling */
+.membership-form h2 {
+    font-size: 3rem; /* Increased font size for "Bli Medlem" */
+    margin-bottom: 20px;
+    font-weight: bold; /* Makes the text bolder */
+    color: #e2e8f0; /* Ensures text color matches the theme */
+}
+
+/* Form Container Styling */
+.form-container {
+    max-width: 800px; /* Centers the form and limits width */
+    margin: 0 auto; /* Aligns to the center */
+    padding: 20px; /* Adds spacing inside the container */
+    background-color: #1a202c; /* Ensures the same background color */
+    border-radius: 10px; /* Rounded corners for a clean look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+}
+
+/* Embedded Google Form */
+iframe {
+    width: 100%; /* Makes the iframe responsive */
+    height: 800px; /* Adjusts the height */
+    border: none; /* Removes the iframe border */
+    border-radius: 10px; /* Matches the container's rounded corners */
+}
+
+/* Styling for the Submit Button */
+
+.about-section {
+    padding: 20px;
+    background-color: #2d3748; /* Match the background color */
+}
+
+.frame-container {
+    border: 3px solid #63b3ed; /* Accent color for the frame */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background-color: #2d3748; /* Same background as the main section */
+}
+
+.container {
+    padding: 15px; /* Add some padding inside the container */
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out; /* Animation for fade-in effect */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Base styling for all sections */
+.about-section {
+    padding: 20px;
+    background-color: #2d3748; /* Matches the background theme */
+    color: #e2e8f0; /* Light text for contrast */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Depth effect */
+    margin: 20px 0; /* Space between sections */
+}
+
+/* Frame container for additional styling */
+.frame-container {
+    border: 3px solid #63b3ed; /* Accent color */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners for a softer look */
+    background-color: #2d3748; /* Same as the main section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Styling for headings */
+.about-section h2 {
+    font-size: 2rem; /* Heading size */
+    color: #63b3ed; /* Accent color */
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Styling for text */
+.about-section p {
+    font-size: 1.1rem; /* Standard text size */
+    line-height: 1.6; /* Comfortable line spacing */
+    color: #cbd5e0; /* Light grey text */
+    margin-bottom: 20px; /* Space between paragraphs */
+    font-family: 'Verdana', sans-serif; /* Slightly different font for emphasis */
+    text-align: justify; /* Justified text for better readability */
+}
+
+/* Animation effect for elements */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%; /* Full width to align items across */
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px; /* Space between the links */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item a {
+    display: block;
+    padding: 8px 16px; /* Adjust padding for clickable area */
+    text-decoration: none;
+    color: #ffffff; /* Text color */
+    font-weight: 500; /* Optional: make text bold */
+}
+
+.nav-item a:hover {
+    color: #b3b3b3; /* Change color on hover */
+}
+
