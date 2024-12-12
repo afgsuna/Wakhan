@@ -9,13 +9,14 @@
     <link rel="icon" href="fevicon.png" type="image/gif" sizes="16x16">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
-   
     <header id="header" class="header bg-gray-900 text-white">
         <div class="container container-lg mx-auto px-4 py-5 flex justify-between items-center">
-            <a href="#home" class="logo text-3xl font-bold hover:text-gray-300">Wakhan Förening<span class="text-teal-400"></span></a>
+            <a href="#home" class="logo text-3xl font-bold hover:text-gray-300">Wakhan Förening</a>
             <nav id="nav" class="nav">
                 <ul class="nav-list flex flex-col md:flex-row md:space-x-6">
                     <li class="nav-item">
@@ -28,146 +29,199 @@
                         <a href="#membership-form" class="nav-link hover:text-gray-300">Bli Medlem</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#services-row" class="nav-link hover:text-gray-300">Kristianstad Kommun</a>
+                        <a href="#kristianstad-info" class="nav-link hover:text-gray-300">Kristianstad Kommun</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link hover:text-gray-300">Kontakt</a>
+                        <a href="#contact-form" class="nav-link hover:text-gray-300">Kontakt</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    
-        <div class="hero-image">
-            <img src="COVERPamir-HD-15.jpg" alt="Wakhan Valley" class="hero-image-content" />
-            <div class="hero-text-ini">
-                <h1 style="font-size:50px">Wakhan Förening</h1>
-                <h2>Kristianstad</h2>
+
+    <div class="hero-image">
+        <img src="COVERPamir-HD-15.jpg" alt="Wakhan Valley" class="hero-image-content" />
+        <div class="hero-text-ini">
+            <h1 style="font-size:50px">Wakhan Förening</h1>
+            <h2>Kristianstad</h2>
+        </div>
+    </div>
+
+    <section id="about-section" class="about-section">
+        <div class="container">
+            <h2 class="fade-in gradient-text">Om Wakhan Förening</h2>
+            <p class="fade-in styled-text">
+                Wakhan Förening är en sport- och kulturförening baserad i Kristianstad, med en stark vision om att stärka gemenskapen och främja integration i det svenska samhället. 
+                Genom ett brett utbud av aktiviteter strävar vi efter att förena människor från olika bakgrunder och skapa en inkluderande atmosfär där alla känner sig välkomna. 
+                Vår förening erbjuder ett mångsidigt program som inkluderar idrott, kulturella evenemang och sociala sammankomster – allt för att bygga broar, 
+                skapa nya vänskapsband och främja förståelse mellan olika samhällsgrupper.
+            </p>
+            <p class="fade-in styled-text">Våra grundläggande värderingar inkluderar:</p>
+            <ul class="values-list">
+                <li class="fade-in styled-list-item">
+                    <i class="fas fa-handshake"></i>
+                    <strong>Enighet:</strong> Att bygga broar mellan olika kulturer och bakgrunder.
+                </li>
+                <li class="fade-in styled-list-item">
+                    <i class="fas fa-futbol"></i>
+                    <strong>Sport:</strong> Att främja hälsa och gemenskap genom idrott.
+                </li>
+                <li class="fade-in styled-list-item">
+                    <i class="fas fa-palette"></i>
+                    <strong>Kultur:</strong> Att bevara och dela kulturella traditioner.
+                </li>
+                <li class="fade-in styled-list-item">
+                    <i class="fas fa-users"></i>
+                    <strong>Aktivitet:</strong> Att skapa meningsfulla aktiviteter för alla åldrar.
+                </li>
+                <li class="fade-in styled-list-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <strong>Jämlikhet:</strong> Att säkerställa lika möjligheter för alla medlemmar.
+                </li>
+                <li class="fade-in styled-list-item">
+                    <i class="fas fa-globe-europe"></i>
+                    <strong>Integration:</strong> Att stödja nya och gamla medlemmar i det svenska samhället.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="image-slider" class="image-slider">
+        <div class="slider-container">
+            <div class="slide fade">
+                <img src="Media/1.jpg" alt="Image 1">
+            </div>
+            <div class="slide fade">
+                <img src="Media/2.jpg" alt="Image 2">
+            </div>
+            <div class="slide fade">
+                <img src="Media/3.jpg" alt="Image 3">
+            </div>
+            <div class="slide fade">
+                <img src="Media/4.jpg" alt="Image 4">
+            </div>
+            <div class="slide fade">
+                <img src="Media/5.jpg" alt="Image 5">
+            </div>
+            <div class="slide fade">
+                <img src="Media/6.jpg" alt="Image 6">
+            </div>
+            <div class="slide fade">
+                <img src="Media/7.jpg" alt="Image 7">
+            </div>
+            <div class="slide fade">
+                <img src="Media/8.jpg" alt="Image 8">
             </div>
         </div>
+    </section>
 
-        <section class="about-section" id="about">
-            <div class="container">
-                <h2 class="fade-in gradient-text">Om Wakhan Förening</h2>
-                <p class="fade-in styled-text">
-                    Wakhan Förening är en sport- och kulturförening baserad i Kristianstad, med en stark vision om att stärka gemenskapen och främja integration i det svenska samhället. 
-                    Genom ett brett utbud av aktiviteter strävar vi efter att förena människor från olika bakgrunder och skapa en inkluderande atmosfär där alla känner sig välkomna. 
-                    Vår förening erbjuder ett mångsidigt program som inkluderar idrott, kulturella evenemang och sociala sammankomster – allt för att bygga broar, 
-                    skapa nya vänskapsband och främja förståelse mellan olika samhällsgrupper.
+    <section id="membership-form" class="membership-form">
+        <h2>Bli Medlem</h2>
+        <form id="member-form">
+            <label for="first-name">Förnamn:</label>
+            <input type="text" id="first-name" required>
+            <label for="last-name">Efternamn:</label>
+            <input type="text" id="last-name" required>
+            <label for="telephone">Telefonnummer:</label>
+            <input type="tel" id="telephone" required>
+            <label for="email">E-post:</label>
+            <input type="email" id="email" required>
+            <button type="submit">Registrera</button>
+        </form>
+    </section>
 
-                    Vi tror på kraften i gemenskap och delade upplevelser och arbetar för att erbjuda en plattform där individer kan växa och utvecklas tillsammans. 
-                    Vår ambition är att vara en katalysator för positiv förändring, där alla får möjlighet att delta och bidra till en mer sammanhållen och harmonisk samhällsmiljö.
-                </p>
-                <p class="fade-in styled-text">
-                    Våra grundläggande värderingar inkluderar:
-                </p>
-                <ul class="values-list">
-                    <li class="fade-in styled-list-item">
-                        <i class="fas fa-handshake"></i>
-                        <strong>Enighet:</strong> Att bygga broar mellan olika kulturer och bakgrunder.
-                    </li>
-                    <li class="fade-in styled-list-item">
-                        <i class="fas fa-futbol"></i>
-                        <strong>Sport:</strong> Att främja hälsa och gemenskap genom idrott.
-                    </li>
-                    <li class="fade-in styled-list-item">
-                        <i class="fas fa-palette"></i>
-                        <strong>Kultur:</strong> Att bevara och dela kulturella traditioner.
-                    </li>
-                    <li class="fade-in styled-list-item">
-                        <i class="fas fa-users"></i>
-                        <strong>Aktivitet:</strong> Att skapa meningsfulla aktiviteter för alla åldrar.
-                    </li>
-                    <li class="fade-in styled-list-item">
-                        <i class="fas fa-balance-scale"></i>
-                        <strong>Jämlikhet:</strong> Att säkerställa lika möjligheter för alla medlemmar.
-                    </li>
-                    <li class="fade-in styled-list-item">
-                        <i class="fas fa-globe-europe"></i>
-                        <strong>Integration:</strong> Att stödja nya och gamla medlemmar i det svenska samhället.
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-
-
-        <section class="image-slider">
-            <div class="slider-container">
-                <div class="slide fade">
-                    <img src="Media/1.jpg" alt="Image 1">
-                </div>
-                <div class="slide fade">
-                    <img src="Media/2.jpg" alt="Image 2">
-                </div>
-                <div class="slide fade">
-                    <img src="Media/3.jpg" alt="Image 3">
-                </div>
-                <div class="slide fade">
-                    <img src="Media/4.jpg" alt="Image 4">
-                </div>
-                <div class="slide fade">
-                    <img src="Media/5.jpg" alt="Image 5">
-                </div>
-                <div class="slide fade">
-                    <img src="Media/6.jpg" alt="Image 6">
-                </div>
-                <div class="slide fade">
-                    <img src="Media/7.jpg" alt="Image 7">
-                </div>
-                <div class="slide fade">
-                    <img src="Media/8.jpg" alt="Image 8">
+    <section id="kristianstad-info" class="kristianstad-info">
+        <div class="kristianstad-info-container">
+            <!-- History Section -->
+            <div class="info-box">
+                <img src="C4/1.jpg" alt="Historia om Kristianstad" class="info-image">
+                <div class="info-text">
+                    <h3>Historia</h3>
+                    <p>Kristianstad har en rik historia som sträcker sig tillbaka till grundandet 1614. Staden byggdes som en befäst stad under kung Christian IV:s regeringstid i Danmark. Under århundradena har den utvecklats till ett betydande kulturellt och ekonomiskt centrum i södra Sverige.</p>
                 </div>
             </div>
-        </section>
+            
+            <!-- Geography Section -->
+            <div class="info-box">
+                <img src="/C4/2.jpg" alt="Geografi i Kristianstad" class="info-image">
+                <div class="info-text">
+                    <h3>Geografi</h3>
+                    <p>Kristianstad ligger i Skåne län, i den sydligaste delen av Sverige. Staden ligger nära de vackra Bökebergsåsen och det stora biosfärområdet Kristianstad Vattenrike, vilket gör det till ett område med mångsidiga landskap.</p>
+                </div>
+            </div>
+    
+            <!-- Population Section -->
+            <div class="info-box">
+                <img src="C4/3.jpg" alt="Befolkning i Kristianstad" class="info-image">
+                <div class="info-text">
+                    <h3>Befolkning</h3>
+                    <p>Kristianstad har en befolkning på cirka 85 000 personer. Staden har en blandning av urbana och lantliga områden, med en växande gemenskap som värdesätter hållbarhet och samhällsengagemang.</p>
+                </div>
+            </div>
+    
+            <!-- Nature Section -->
+            <div class="info-box">
+                <img src="C4/4.jpg" alt="Natur i Kristianstad" class="info-image">
+                <div class="info-text">
+                    <h3>Natur</h3>
+                    <p>Kristianstad är känt för sin natursköna skönhet, med många parker, skogar och våtmarker. De närliggande Vattenrike-våtmarkerna erbjuder en rik livsmiljö för ett mångsidigt djurliv, vilket gör det till ett utmärkt resmål för naturälskare.</p>
+                </div>
+            </div>
+        </div>
+    </section> 
+    
 
-        <section class="membership-form">
-            <h2>Bli Medlem</h2>
-            <div class="form-container">
-                <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSd-LLYTDczdWI6-MnH29T0INCUDRJQiAOl3h9v9_vlX4FYwgQ/viewform?embedded=true" 
-                    width="100%" 
-                    height="800px" 
-                    frameborder="0">
-                    Loading…
-                </iframe>
-            </div>
-        </section>
-        
-            <div class="bg-gray-800">
-              <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                <p class="text-gray-600 text-sm text-center sm:text-left">© Hassan Mousavi
-                  <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" rel="noopener noreferrer" target="_blank">Hassan Mousavi</a>
-                </p>
-                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-                  <a class="text-gray-600">
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                    </svg>
-                  </a>
-                  <a class="ml-3 text-gray-600">
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                    </svg>
-                  </a>
-                  <a class="ml-3 text-gray-600">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                    </svg>
-                  </a>
-                  <a class="ml-3 text-gray-600">
-                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                      <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                    </svg>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </footer>
-    </main>
+
+    <!-- HTML Code -->
+<section id="kontakt-section" class="kontakt-section">
+    <h2>Kontakta Oss</h2>
+    <form id="contact-form">
+        <label for="contact-first-name">Förnamn:</label>
+        <input type="text" id="contact-first-name" required>
+
+        <label for="contact-last-name">Efternamn:</label>
+        <input type="text" id="contact-last-name" required>
+
+        <label for="contact-telephone">Telefonnummer:</label>
+        <input type="tel" id="contact-telephone" required>
+
+        <label for="contact-email">E-post:</label>
+        <input type="email" id="contact-email" required>
+
+        <label for="contact-message">Meddelande:</label>
+        <textarea id="contact-message" rows="5" required></textarea>
+
+        <button type="submit1">Skicka</button>
+    </form>
+</section>
+
+
+
+    <div class="music-player">
+        <h2>Music Player</h2>
+        <audio controls autoplay>
+            <source src="Music/2.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <footer class="bg-gray-800">
+        <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+            <p class="text-gray-600 text-sm text-center sm:text-left">© Hassan Mousavi
+                <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" rel="noopener noreferrer" target="_blank">Hassan Mousavi</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                <!-- Social media links -->
+            </span>
+        </div>
+    </footer>
+
     <script src="slider.js"></script>
+    <script src="formSubmission.js"></script>
+    <script src="kontakt.js"></script>
+
 </body>
 
 </html>
+
+
