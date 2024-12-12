@@ -17,7 +17,7 @@ document.getElementById('member-form').addEventListener('submit', function(event
     `);
 
     // Set up the mailto link
-    const mailtoLink = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:afgsuna@yahoo.com?subject=${subject}&body=${body}`;
 
     // Open the user's email client with the pre-filled details
     window.location.href = mailtoLink;
